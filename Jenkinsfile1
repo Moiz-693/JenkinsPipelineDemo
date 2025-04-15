@@ -13,11 +13,5 @@ pipeline {
                 }
             }
         }
-
-        stage('Archive Output') {
-            steps {
-                archiveArtifacts artifacts: 'output\\**', fingerprint: true
-            }
-        }
     }
 }
