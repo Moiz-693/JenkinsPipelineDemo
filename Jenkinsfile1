@@ -9,7 +9,7 @@ pipeline {
                     bat 'mkdir output\\myFolder'
 
                     // Copy all files from src to the new folder
-                    bat 'xcopy /Y /E /I * output\\myFolder\\'
+                    bat 'xcopy /Y /E /I Second Job\\* output\\myFolder\\'
                 }
             }
         }
