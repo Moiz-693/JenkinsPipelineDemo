@@ -1,0 +1,23 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Create Folder and Copy Files') {
+            steps {
+                script {
+                    // Create a new folder (if it doesn't already exist)
+                    bat 'mkdir output\\myFolder'
+
+                    // Copy all files from src to the new folder
+                    bat 'xcopy /Y /E /I src\\* output\\myFolder\\'
+                }
+            }
+        }
+
+        stage('Archive Output') {
+            steps {
+                archiveArtifacts artifacts: 'output\\**', fingerprint: true
+            }
+        }
+    }
+}
