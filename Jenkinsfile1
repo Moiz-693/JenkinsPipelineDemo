@@ -6,10 +6,10 @@ pipeline {
             steps {
                 script {
                     // Create a new folder (if it doesn't already exist)
-                    bat 'mkdir output\\myFolder'
+                   
 
                     // Copy all files from src to the new folder
-                    bat 'xcopy  E:\\Software Architcture\\* output\\myFolder\\'
+                    bat 'xcopy  E:\\Software Architcture\\* output\\myFolder
                 }
             }
         }
