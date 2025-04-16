@@ -9,7 +9,10 @@ pipeline {
                    
 
                     // Copy all files from src to the new folder
-                    bat 'xcopy /Y /E /I "E:\\Software Architcture\\*" "output\\myFolder\\"'
+                    bat 'xcopy /Y /E /I "output\\myFolder\\"' 
+
+                    //bat 'xcopy /Y /E /I "E:\\Software Architcture\\*" "output\\myFolder\\"'
+
 
                 }
             }
